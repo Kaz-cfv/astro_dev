@@ -1,0 +1,35 @@
+{
+  "name": "crefla-projects",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CREBAR FLAVOR. is project for develop",
+  "author": "CREBAR FLAVOR.",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.11.1"
+  },
+  "devDependencies": {
+    "@astrojs/partytown": "^2.1.1",
+    "gsap": "^3.12.5",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.4.38",
+    "postcss-custom-media": "^10.0.6",
+    "postcss-custom-media-generator": "^1.1.0",
+    "postcss-gap-properties": "^5.0.1",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^9.5.14",
+    "sass": "^1.77.5",
+    "swiper": "^11.1.4"
+  },
+  "volta": {
+    "node": "20.11.0",
+    "yarn": "1.22.17"
+  }
+}

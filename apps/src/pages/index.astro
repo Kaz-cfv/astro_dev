@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+const env_name = import.meta.env.PUBLIC_SITE_NAME;
+const env_url = import.meta.env.PUBLIC_SITE_URL;
+---
+
+<Layout
+  title=`${env_name}`
+  description=''
+  page='p-top'
+  canonical=`${env_url}`
+>
+  <main class="l-main">
+  </main>
+</Layout>
+
+<style>
+</style>

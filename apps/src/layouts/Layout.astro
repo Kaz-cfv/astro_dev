@@ -1,0 +1,53 @@
+---
+import 'normalize.css';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  page: string;
+  canonical: string;
+}
+
+const { title, description, page, canonical } = Astro.props;
+const env_ogp = import.meta.env.PUBLIC_OG_IMAGE;
+const env_icon = import.meta.env.PUBLIC_ICON;
+---
+
+<!doctype html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={env_ogp} />
+    <meta property="og:site_name" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:image" content={env_ogp} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="192x192" href={env_icon}>
+  </head>
+  <body class={page}>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --black: #000;
+    --white: #FFF;
+  }
+</style>
